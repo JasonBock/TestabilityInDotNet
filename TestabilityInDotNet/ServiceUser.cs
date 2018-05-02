@@ -9,6 +9,6 @@ namespace TestabilityInDotNet
 		public ServiceUser(IService service) =>
 			this.service = service ?? throw new ArgumentNullException(nameof(service));
 
-		public Guid Use() => this.service.GetId();
+		public Guid Use() => this.service.GetId(); // Guid.NewGuid();
 	}
 }

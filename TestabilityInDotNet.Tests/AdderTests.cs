@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace TestabilityInDotNet.Tests
 {
@@ -8,7 +9,10 @@ namespace TestabilityInDotNet.Tests
 		[Test]
 		public void Add() => Assert.That(Adder.Add(3, 6), Is.EqualTo(9));
 
+		//[Test]
+		//public void AddWithOverflow() => Assert.That(Adder.Add(int.MaxValue, int.MaxValue), Is.EqualTo(-2));
+
 		[Test]
-		public void AddWithOverflow() => Assert.That(Adder.Add(int.MaxValue, int.MaxValue), Is.EqualTo(-2));
+		public void AddWithOverflow() => Assert.That(() => Adder.Add(int.MaxValue, int.MaxValue), Throws.TypeOf<OverflowException>());
 	}
 }
