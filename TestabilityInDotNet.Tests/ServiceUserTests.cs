@@ -4,15 +4,14 @@ using System;
 
 namespace TestabilityInDotNet.Tests
 {
-	[TestFixture]
-	public sealed class ServiceUserTests
+	public static class ServiceUserTests
 	{
 		[Test]
-		public void CreateWithNull() =>
+		public static void CreateWithNull() =>
 			Assert.That(() => new ServiceUser(null), Throws.TypeOf<ArgumentNullException>());
 
 		[Test]
-		public void Use()
+		public static void Use()
 		{
 			// Arrange
 			var id = Guid.NewGuid();
