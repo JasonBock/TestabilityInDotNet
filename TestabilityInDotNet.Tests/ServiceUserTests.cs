@@ -8,7 +8,7 @@ namespace TestabilityInDotNet.Tests
 	{
 		[Test]
 		public static void CreateWithNull() =>
-			Assert.That(() => new ServiceUser(null), Throws.TypeOf<ArgumentNullException>());
+			Assert.That(() => new ServiceUser(null!), Throws.TypeOf<ArgumentNullException>());
 
 		[Test]
 		public static void Use()
