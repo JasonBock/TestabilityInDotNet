@@ -15,7 +15,8 @@ namespace TestabilityInDotNet.Tests
 		{
 			// Arrange
 			var id = Guid.NewGuid();
-			var serviceMock = new Mock<IService>(MockBehavior.Strict);
+			var repository = new MockRepository(MockBehavior.Strict);
+			var serviceMock = repository.Create<IService>();
 			serviceMock.Setup(_ => _.GetId()).Returns(id);
 
 			// Act
@@ -23,7 +24,7 @@ namespace TestabilityInDotNet.Tests
 
 			// Assert
 			Assert.That(serviceUser.Use(), Is.EqualTo(id));
-			serviceMock.VerifyAll();
+			repository.VerifyAll();
 		}
 	}
 }

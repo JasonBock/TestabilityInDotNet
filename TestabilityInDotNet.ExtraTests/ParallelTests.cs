@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Threading.Tasks;
 
-namespace TestabilityInDotNet.Tests
+namespace TestabilityInDotNet.ExtraTests
 {
 	public static class ParallelOneTests
 	{

@@ -2,7 +2,7 @@
 
 namespace TestabilityInDotNet.Tests
 {
-	public static class FizzBuzzClassifierTests
+	public static class FizzBuzzClassifierTestss
 	{
 		[Test]
 		public static void ClassifyFizz() => Assert.That(FizzBuzzClassifier.Classify(3), Is.EqualTo(Classifier.Fizz));
@@ -16,7 +16,7 @@ namespace TestabilityInDotNet.Tests
 		//[Test]
 		//public static void ClassifyNone() => Assert.That(FizzBuzzClassifier.Classify(2), Is.Null);
 
-		[Test]
-		public static void ClassifyNoneWithNoAssertion() => FizzBuzzClassifier.Classify(2);
+		//[Test]
+		//public static void ClassifyNoneWithNoAssertion() => FizzBuzzClassifier.Classify(2);
 	}
 }
