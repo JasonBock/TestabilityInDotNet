@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace BenchmarkTreeGeneration
+namespace TestabilityInDotNet.Performance
 {
 	[MemoryDiagnoser]
 	public class CreateRoslynTrees

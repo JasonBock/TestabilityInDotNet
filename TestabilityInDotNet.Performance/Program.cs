@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using BenchmarkTreeGeneration;
 
 namespace TestabilityInDotNet.Performance
 {
