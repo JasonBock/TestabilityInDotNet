@@ -4,6 +4,6 @@ namespace TestabilityInDotNet.Performance
 {
 	class Program
 	{
-		static void Main() => BenchmarkRunner.Run<CreatingRandomBigIntegers>();
+		static void Main() => BenchmarkRunner.Run<CreatingPartitions>();
 	}
 }
