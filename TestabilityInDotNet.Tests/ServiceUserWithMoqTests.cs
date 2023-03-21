@@ -4,7 +4,7 @@ using System;
 
 namespace TestabilityInDotNet.Tests
 {
-	public static class ServiceUserTests
+	public static class ServiceUserWithMoqTests
 	{
 		[Test]
 		public static void CreateWithNull() =>

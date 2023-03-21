@@ -7,8 +7,7 @@ using System.Collections.Immutable;
 
 namespace TestabilityInDotNet.Performance
 {
-#pragma warning disable CA1822
-	[MemoryDiagnoser]
+   [MemoryDiagnoser]
 	[Config(typeof(Configuration))]
 	public class CreatingPartitions
 	{
@@ -23,7 +22,7 @@ namespace TestabilityInDotNet.Performance
 				this.AddJob(baseJob.WithNuGet("Spackle", "9.1.5").WithId("9.1.5"));
 			}
 		}
-#pragma warning disable CA1812
+#pragma warning restore CA1812
 
 		public static IEnumerable<(Range<int>, int)> NumberOfDigits()
 		{
@@ -37,5 +36,4 @@ namespace TestabilityInDotNet.Performance
 		public ImmutableArray<Range<int>> Create((Range<int> range, int numberOfPartitions) values) =>
 			values.range.Partition(values.numberOfPartitions);
 	}
-#pragma warning restore CA1822
 }

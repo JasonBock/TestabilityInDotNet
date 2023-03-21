@@ -5,7 +5,9 @@
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
 		<PackageVersion Include="Moq" Version="4.18.4" />
 		<PackageVersion Include="NUnit" Version="3.13.3" />
+		<PackageVersion Include="NUnit.Analyzers" Version="3.6.1" />
 		<PackageVersion Include="NUnit3TestAdapter" Version="4.4.2" />
+		<PackageVersion Include="Rocks" Version="7.0.0" />
 		<PackageVersion Include="Spackle" Version="12.0.0" />
 	</ItemGroup>
 </Project>

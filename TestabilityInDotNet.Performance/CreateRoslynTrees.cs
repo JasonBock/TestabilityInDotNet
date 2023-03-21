@@ -10,21 +10,22 @@ namespace TestabilityInDotNet.Performance
 	{
 		[Benchmark(Baseline = true)]
 #pragma warning disable CA1822 // Mark members as static
-#pragma warning disable CA1303 // Do not pass literals as localized parameters
-		public CompilationUnitSyntax CreateTreeViaParsing() =>
+	  public CompilationUnitSyntax CreateTreeViaParsing() =>
 			SyntaxFactory.ParseCompilationUnit(
-@"using System;
+				"""
+				using System;
 
-namespace HelloWorld 
-{  
-	class Program  
-	{    
-		static void Main(string[] args)    
-		{      
-			Console.Out.WriteLine(""Hello compiled world"");    
-		}  
-	} 
-}");
+				namespace HelloWorld 
+				{  
+					class Program  
+					{    
+						static void Main(string[] args)    
+						{      
+							Console.Out.WriteLine("Hello compiled world");    
+						}  
+					} 
+				}
+				""");
 
 		[Benchmark]
 		public CompilationUnitSyntax CreateTreeViaFactory() =>
@@ -247,6 +248,5 @@ namespace HelloWorld
 				.WithEndOfFileToken(
 					 SyntaxFactory.Token(SyntaxKind.EndOfFileToken));
 	}
-#pragma warning restore CA1303 // Do not pass literals as localized parameters
 #pragma warning restore CA1822 // Mark members as static
 }
