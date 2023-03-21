@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29209.62
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestabilityInDotNet", "TestabilityInDotNet\TestabilityInDotNet.csproj", "{04A9711F-F728-4846-9258-8C397F158FC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestabilityInDotNet.Tests", "TestabilityInDotNet.Tests\TestabilityInDotNet.Tests.csproj", "{AF95AE5E-0C08-4AD1-9503-139A59224B1B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestabilityInDotNet.Exploratory", "TestabilityInDotNet.Exploratory\TestabilityInDotNet.Exploratory.csproj", "{69252AF0-6BD0-49CF-9A1D-F66B48D2DAA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestabilityInDotNet.Performance", "TestabilityInDotNet.Performance\TestabilityInDotNet.Performance.csproj", "{79CDBD49-583E-4506-901E-9CF72E81CBB0}"
 EndProject
@@ -15,10 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestabilityInDotNet.ExtraTests", "TestabilityInDotNet.ExtraTests\TestabilityInDotNet.ExtraTests.csproj", "{0C07195E-F16F-4C1A-9C74-74126A0140CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestabilityInDotNet.ExtraTests", "TestabilityInDotNet.ExtraTests\TestabilityInDotNet.ExtraTests.csproj", "{0C07195E-F16F-4C1A-9C74-74126A0140CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +33,6 @@ Global
 		{AF95AE5E-0C08-4AD1-9503-139A59224B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF95AE5E-0C08-4AD1-9503-139A59224B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF95AE5E-0C08-4AD1-9503-139A59224B1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69252AF0-6BD0-49CF-9A1D-F66B48D2DAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69252AF0-6BD0-49CF-9A1D-F66B48D2DAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69252AF0-6BD0-49CF-9A1D-F66B48D2DAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69252AF0-6BD0-49CF-9A1D-F66B48D2DAA5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79CDBD49-583E-4506-901E-9CF72E81CBB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79CDBD49-583E-4506-901E-9CF72E81CBB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79CDBD49-583E-4506-901E-9CF72E81CBB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
