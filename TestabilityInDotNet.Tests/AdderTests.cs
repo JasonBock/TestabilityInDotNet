@@ -41,5 +41,9 @@ namespace TestabilityInDotNet.Tests
 		[Test]
 		public static void AddCheckedWithoutOverflow() =>
 			Assert.That(Adder.AddChecked(2, 4), Is.EqualTo(6));
+
+		//[Test]
+		//public static void AddBadTest() =>
+		//	Assert.That(Adder.Add(2, 2), Is.EqualTo(4));
 	}
 }
