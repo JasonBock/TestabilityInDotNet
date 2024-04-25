@@ -5,6 +5,7 @@ namespace TestabilityInDotNet.Tests;
 
 public static class AdderTests
 {
+	/*
 	[Test]
 	public static void AddWithExplicitAAA()
 	{
@@ -45,4 +46,11 @@ public static class AdderTests
 	//[Test]
 	//public static void AddBadTest() =>
 	//	Assert.That(Adder.Add(2, 2), Is.EqualTo(4));
+	*/
+
+	// Comment out all other tests here
+	// and add this one to demo Stryker
+	[Test]
+	public static void AddWithZeros() =>
+		Assert.That(Adder.Add(0, 0), Is.EqualTo(0));
 }
