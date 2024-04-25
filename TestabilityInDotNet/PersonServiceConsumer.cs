@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace TestabilityInDotNet
+namespace TestabilityInDotNet;
+
+public sealed class PersonServiceConsumer
 {
-	public sealed class PersonServiceConsumer
-	{
-		private readonly IPersonService service;
+	private readonly IPersonService service;
 
-		public PersonServiceConsumer(IPersonService service) =>
-			this.service = service ?? throw new ArgumentNullException(nameof(service));
+	public PersonServiceConsumer(IPersonService service) =>
+		this.service = service ?? throw new ArgumentNullException(nameof(service));
 
-		public Person Find(Guid id) => this.service.Get(id);
-	}
+	public Person Find(Guid id) => this.service.Get(id);
 }

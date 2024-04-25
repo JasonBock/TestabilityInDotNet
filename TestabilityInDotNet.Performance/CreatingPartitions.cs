@@ -5,35 +5,34 @@ using Spackle;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace TestabilityInDotNet.Performance
+namespace TestabilityInDotNet.Performance;
+
+[MemoryDiagnoser]
+[Config(typeof(Configuration))]
+public class CreatingPartitions
 {
-   [MemoryDiagnoser]
-	[Config(typeof(Configuration))]
-	public class CreatingPartitions
-	{
 #pragma warning disable CA1812
-		private sealed class Configuration
-			: ManualConfig
+	private sealed class Configuration
+		: ManualConfig
+	{
+		public Configuration()
 		{
-			public Configuration()
-			{
-				var baseJob = Job.MediumRun;
-				this.AddJob(baseJob.WithNuGet("Spackle", "9.1.0").WithId("9.1.0"));
-				this.AddJob(baseJob.WithNuGet("Spackle", "9.1.5").WithId("9.1.5"));
-			}
+			var baseJob = Job.MediumRun;
+			this.AddJob(baseJob.WithNuGet("Spackle", "9.1.0").WithId("9.1.0"));
+			this.AddJob(baseJob.WithNuGet("Spackle", "9.1.5").WithId("9.1.5"));
 		}
+	}
 #pragma warning restore CA1812
 
-		public static IEnumerable<(Range<int>, int)> NumberOfDigits()
-		{
-			yield return (new(0, 100), 4);
-			yield return (new(77, 90431), 6);
-			yield return (new(6, 9845), 21);
-		}
-
-		[Benchmark]
-		[ArgumentsSource(nameof(CreatingPartitions.NumberOfDigits))]
-		public ImmutableArray<Range<int>> Create((Range<int> range, int numberOfPartitions) values) =>
-			values.range.Partition(values.numberOfPartitions);
+	public static IEnumerable<(Range<int>, int)> NumberOfDigits()
+	{
+		yield return (new(0, 100), 4);
+		yield return (new(77, 90431), 6);
+		yield return (new(6, 9845), 21);
 	}
+
+	[Benchmark]
+	[ArgumentsSource(nameof(CreatingPartitions.NumberOfDigits))]
+	public ImmutableArray<Range<int>> Create((Range<int> range, int numberOfPartitions) values) =>
+		values.range.Partition(values.numberOfPartitions);
 }

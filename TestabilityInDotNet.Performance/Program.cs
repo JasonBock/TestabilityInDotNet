@@ -1,9 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
+using TestabilityInDotNet.Performance;
 
-namespace TestabilityInDotNet.Performance
-{
-	class Program
-	{
-		static void Main() => BenchmarkRunner.Run<CreatingPartitions>();
-	}
-}
+BenchmarkRunner.Run<CreatingPartitions>();

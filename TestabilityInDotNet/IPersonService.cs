@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace TestabilityInDotNet
+namespace TestabilityInDotNet;
+
+public interface IPersonService
 {
-	public interface IPersonService
-	{
-		Person Get(Guid id);
-	}
+	Person Get(Guid id);
 }
